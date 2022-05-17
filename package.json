@@ -29,9 +29,5 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3"
-  },
-  "lint-staged": {
-    "*.{tsx,ts,js}": "eslint --cache --fix",
-    "*./packages": "prettier --write"
   }
 }
