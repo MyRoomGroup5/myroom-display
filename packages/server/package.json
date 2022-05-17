@@ -1,0 +1,25 @@
+{
+  "name": "@myroom-display/server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev nodemon -w './src/**/*.ts' -x 'esmo' ./src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-router": "^7.4.4",
+    "@types/koa-static": "^4.0.2",
+    "esno": "^0.15.0"
+  }
+}

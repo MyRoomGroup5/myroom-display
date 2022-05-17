@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
