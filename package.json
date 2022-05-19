@@ -9,7 +9,7 @@
     "i:server": "pnpm i -r --filter @myroom-display/server",
     "lint": "eslint --ext .tsx,.ts,.js --fix ./packages",
     "format": "prettier --write ./packages",
-    "dev": "pnpm --filter @monorepo-test/* -r dev"
+    "dev": "pnpm --filter @myroom-display/* -r dev"
   },
   "keywords": [],
   "author": "",
@@ -29,5 +29,9 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "typescript": "^4.6.3"
+  },
+  "lint-staged": {
+    "*.{tsx,ts,js}": "eslint --cache --fix",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
