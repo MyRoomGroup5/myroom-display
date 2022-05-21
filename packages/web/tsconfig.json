@@ -4,7 +4,10 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"],

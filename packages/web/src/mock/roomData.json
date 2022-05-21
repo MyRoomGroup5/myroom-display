@@ -1,0 +1,38 @@
+{
+  "roomId": "xxx",
+  "figure": [
+    {
+      "url": "https://ke-image.ljcdn.com/110000-inspection/pc0_Mpb3fWWuz_1.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com",
+      "size": "640*82",
+      "type": "realShot",
+      "desc": "客厅"
+    },
+    {
+      "url": "https://ke-image.ljcdn.com/110000-inspection/pc0_QIiAgYrRk.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com",
+      "size": "640*82",
+      "type": "realShot",
+      "desc": "卧室"
+    },
+    {
+      "url": "https://ke-image.ljcdn.com/hdic-frame/standard_0822a276-7502-41a0-b969-e72bf889e24c.png!m_fill,w_720,h_540,l_bk,f_jpg,ls_30?from=ke.com",
+      "size": "",
+      "type": "houseType",
+      "desc": "户型"
+    }
+  ],
+  "price": {
+    "district": {
+      "name": "海沧",
+      "value": [3.13, 3.07, 3.07, 3.05, 3.07, 3.04]
+    },
+    "avenue": {
+      "name": "海沧区政府",
+      "value": [3.1, 3.08, 3.1, 3.12, 3.09, 3.1]
+    },
+    "community": {
+      "name": "兴港花园三期",
+      "value": [3.09, 3.08, 3.08, 3.11, 3.11, 3.11]
+    },
+    "date": ["12月", "01月", "02月", "03月", "04月", "05月"]
+  }
+}
