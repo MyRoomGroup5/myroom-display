@@ -1,0 +1,20 @@
+.my-NoticeBar {
+  background: linear-gradient(-30deg, #feddb4 55%, #fde0be 15%, #fbf3e4 15%, #fdefda 15%);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #b08642;
+}
+.cardOneContent {
+  font-weight: 500;
+  margin: 0.3rem;
+}
+.cardOneContent > div > span {
+  font-size: 1.1rem;
+  color: #b2b2b2;
+  margin-right: 0.5rem;
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: #f6f6f6;
+}

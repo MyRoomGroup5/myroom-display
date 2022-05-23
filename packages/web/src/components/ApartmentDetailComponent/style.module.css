@@ -1,0 +1,101 @@
+.prefix:before {
+  content: '| ';
+}
+
+p {
+  margin: 0.5rem 0rem;
+}
+
+.ApartmentDetailCard {
+  border: 1px solid #efefef;
+  box-shadow: 2px 2px #efefef;
+  background-color: white;
+  box-sizing: border-box;
+  margin: auto;
+  width: 90%;
+  padding: 0rem 1.5rem;
+  transform: translate(0rem, -2rem);
+}
+
+.ProgressBar {
+  overflow: visible;
+  width: 60%;
+  margin: 0 0.5rem;
+}
+
+.ApartmentDetailFooter {
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  background-color: #fff9f3;
+  color: #ae8f79;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  left: 5%;
+  padding: 0.5rem 1.5rem;
+  padding-top: 1rem;
+  transform: translate(0rem, -3rem);
+}
+
+.ApartmentDetailHeader {
+  position: relative;
+  height: 10rem;
+  background-color: #3e3842;
+  padding: 1.5rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.ApartmentDetailHeaderButton {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  height: 2rem;
+  width: 4rem;
+  font-size: 1rem;
+  color: #f05203;
+  font-weight: bolder;
+  margin: 0%;
+  padding: 0%;
+}
+
+.ApartmentDetailInformationButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ApartmentDetailInformationButtons > * {
+  width: 40%;
+  margin: 1rem;
+  border: 1px solid #efd6bb;
+  font-weight: 600;
+}
+.ApartmentDetailInformationButtons > *:first-child {
+  color: #f75807;
+}
+.ApartmentDetailInformationButtons > *:last-child {
+  color: white;
+  background-color: #fe5500;
+}
+
+.ApartmentDetailCardLeft {
+  width: 30%;
+  box-sizing: border-box;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  border-right: solid 1px #efefef;
+}
+.ApartmentDetailCardRight {
+  box-sizing: border-box;
+  width: 70%;
+  color: #a6a6a6;
+  display: flex;
+  padding-left: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 3 3 auto;
+}
