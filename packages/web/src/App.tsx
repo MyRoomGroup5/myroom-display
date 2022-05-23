@@ -3,6 +3,8 @@ import logo from './logo.svg'
 import './App.css'
 import PriceComponent from './components/PriceComponent'
 import CarouselComponent from './components/CarouselComponent'
+import ApartmentComponent from './components/ApartmentComponnet'
+import ApartmentDetailComponent from './components/ApartmentDetailComponent'
 import CommentCardComponent from './components/CommentCardComponent'
 
 function App() {
@@ -11,6 +13,7 @@ function App() {
       <CarouselComponent></CarouselComponent>
       <PriceComponent></PriceComponent>
       <CommentCardComponent></CommentCardComponent>
+      {/* <ApartmentDetailComponent /> */}
     </div>
   )
 }
