@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import PriceComponent from './components/PriceComponent'
 import CarouselComponent from './components/CarouselComponent'
