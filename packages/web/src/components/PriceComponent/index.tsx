@@ -81,7 +81,7 @@ export default function PriceComponent() {
     ],
   }
   return (
-    <div>
+    <div className="price-component">
       <h2>价格走势</h2>
       <ReactEcharts option={option}></ReactEcharts>
     </div>
