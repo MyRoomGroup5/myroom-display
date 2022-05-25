@@ -1,8 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import { Space, NoticeBar, Toast, Card, Tabs, Ellipsis } from 'antd-mobile'
+import { NavBar, Space, NoticeBar, Toast, Card, Tabs, Ellipsis } from 'antd-mobile'
 import styles from './style.module.css'
 import './iconfont/iconfont.css'
-// 导航栏组件
+
+// 小区介绍详情页导航栏
+const ApartmentDetailNav = () => {
+  const back = () =>
+    Toast.show({
+      content: '点击了返回区域',
+      duration: 1000,
+    })
+
+  return (
+    <NavBar
+      onBack={back}
+      style={{ '--height': '1rem', fontSize: '0.5rem', alignItems: 'center', display: 'flex' }}
+    >
+      <div style={{ fontSize: '0.5rem' }}>卡片标题</div>
+    </NavBar>
+  )
+}
+
+// 消息栏组件
 const NavComponent = (props: any) => {
   const [title, setTitle] = useState('朝阳小区热榜')
   useEffect(() => {
@@ -18,7 +37,7 @@ const NavComponent = (props: any) => {
   return (
     <Space onClick={show} block direction="vertical">
       <NoticeBar
-        className={styles['my-NoticeBar']}
+        className={styles['myNoticeBar']}
         icon={<i className="iconfont icon-jiangbei" />}
         extra={
           <Space style={{ '--gap': '1rem' }}>
@@ -98,51 +117,51 @@ const CardOneComponent = (props: any) => {
 
 // 第二张卡片
 const CardTwoComponent = (props: any) => {
-  const [introduction, setIntroduction] = useState(
+  const [introduction, setIntroduction] = useState([
     '小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情',
-  )
-  const [infrastructure, setInfrastructure] = useState('小区概况详情')
-  const [architecturalQuality, setArchitecturalQuality] = useState('小区概况详情')
-  const [lobbyBuilding, setLobbyBuilding] = useState('小区概况详情')
+  ])
+  const [infrastructure, setInfrastructure] = useState([
+    '小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情',
+  ])
+  const [architecturalQuality, setArchitecturalQuality] = useState(['小区概况详情'])
+  const [lobbyBuilding, setLobbyBuilding] = useState(['小区概况详情'])
   useEffect(() => {
-    // 在此时通过props.apartmentId发送请求获取数据
+    // 在此处通过props.apartmentId发送请求获取数据
   })
   return (
-    <Card
-      headerStyle={{
-        display: 'none',
-        border: 'none',
-        marginBottom: '-1rem',
+    <Tabs
+      style={{
+        '--title-font-size': '0.5rem',
+        '--active-title-color': '#ea7e61',
+        '--active-line-color': '#ea7e61',
+        '--fixed-active-line-width': '2rem',
+        '--content-padding': '0.3rem',
       }}
-      title={<div style={{ fontSize: '0.5rem', fontWeight: 900 }}>小区介绍</div>}
-      style={{ borderRadius: '0.1rem' }}
+      className={styles.myTabs}
+      stretch={true}
+      activeLineMode="fixed"
     >
-      <Tabs
-        style={{
-          '--title-font-size': '0.4rem',
-          '--active-title-color': '#ea7e61',
-          '--active-line-color': '#ea7e61',
-          '--content-padding': '0.4rem',
-          fontSize: '0.3rem',
-          backgroundColor: '#f9f9f9',
-        }}
-        stretch={true}
-        activeLineMode="fixed"
-      >
-        <Tabs.Tab title="小区概况" key="introduction">
-          {introduction}
-        </Tabs.Tab>
-        <Tabs.Tab title="基础设施" key="infrastructure">
-          {infrastructure}
-        </Tabs.Tab>
-        <Tabs.Tab title="建筑品质" key="architecturalQuality">
-          {architecturalQuality}
-        </Tabs.Tab>
-        <Tabs.Tab title="大堂楼栋" key="lobbyBuilding">
-          {lobbyBuilding}
-        </Tabs.Tab>
-      </Tabs>
-    </Card>
+      <Tabs.Tab title="小区概况" key="introduction">
+        {introduction.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
+      </Tabs.Tab>
+      <Tabs.Tab title="基础设施" key="infrastructure">
+        {infrastructure.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
+      </Tabs.Tab>
+      <Tabs.Tab title="建筑品质" key="architecturalQuality">
+        {architecturalQuality.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
+      </Tabs.Tab>
+      <Tabs.Tab title="大堂楼栋" key="lobbyBuilding">
+        {lobbyBuilding.map((item, index) => {
+          return <p key={index}>{item}</p>
+        })}
+      </Tabs.Tab>
+    </Tabs>
   )
 }
 
@@ -153,6 +172,7 @@ interface ApartmentComponentPros {
 const ApartmentComponent = (props: ApartmentComponentPros) => {
   return (
     <div>
+      <ApartmentDetailNav />
       <NavComponent></NavComponent>
       <CardOneComponent apartmentId={props.apartmentId} />
       <CardTwoComponent apartmentId={props.apartmentId} />
