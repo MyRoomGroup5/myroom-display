@@ -124,7 +124,9 @@ const CardTwoComponent = (props: any) => {
     '小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情',
   ])
   const [architecturalQuality, setArchitecturalQuality] = useState(['小区概况详情'])
-  const [lobbyBuilding, setLobbyBuilding] = useState(['小区概况详情'])
+  const [lobbyBuilding, setLobbyBuilding] = useState([
+    '小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情',
+  ])
   useEffect(() => {
     // 在此处通过props.apartmentId发送请求获取数据
   })
@@ -143,22 +145,38 @@ const CardTwoComponent = (props: any) => {
     >
       <Tabs.Tab title="小区概况" key="introduction">
         {introduction.map((item, index) => {
-          return <p key={index}>{item}</p>
+          return (
+            <p key={index} className={styles.pFontSize}>
+              {item}
+            </p>
+          )
         })}
       </Tabs.Tab>
       <Tabs.Tab title="基础设施" key="infrastructure">
         {infrastructure.map((item, index) => {
-          return <p key={index}>{item}</p>
+          return (
+            <p key={index} className={styles.pFontSize}>
+              {item}
+            </p>
+          )
         })}
       </Tabs.Tab>
       <Tabs.Tab title="建筑品质" key="architecturalQuality">
         {architecturalQuality.map((item, index) => {
-          return <p key={index}>{item}</p>
+          return (
+            <p key={index} className={styles.pFontSize}>
+              {item}
+            </p>
+          )
         })}
       </Tabs.Tab>
       <Tabs.Tab title="大堂楼栋" key="lobbyBuilding">
         {lobbyBuilding.map((item, index) => {
-          return <p key={index}>{item}</p>
+          return (
+            <p key={index} className={styles.pFontSize}>
+              {item}
+            </p>
+          )
         })}
       </Tabs.Tab>
     </Tabs>

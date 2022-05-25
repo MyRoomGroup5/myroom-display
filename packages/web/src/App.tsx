@@ -11,6 +11,8 @@ function App() {
       <CarouselComponent></CarouselComponent>
       <PriceComponent></PriceComponent>
       <CommentCardComponent></CommentCardComponent>
+      <ApartmentComponent></ApartmentComponent>
+      <ApartmentDetailComponent></ApartmentDetailComponent>
       {/* <ApartmentDetailComponent /> */}
     </div>
   )

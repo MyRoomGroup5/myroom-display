@@ -9,9 +9,11 @@
   width: 9rem;
 }
 
-.myTabs > div p {
-  /* font-size: 1px; */
+.pFontSize {
+  font-size: 0.5rem;
+  height: 8rem;
 }
+
 .myNoticeBar {
   background: linear-gradient(-30deg, #feddb4 55%, #fde0be 15%, #fbf3e4 15%, #fdefda 15%);
   font-size: 0.3rem;
@@ -20,22 +22,22 @@
   color: #b08642;
 }
 .cardOneContent {
-  font-size: 0.1rem;
+  font-size: 0.3rem;
   font-weight: 500;
   margin: 0.1rem;
 }
 .cardOneContent div {
-  font-size: 0.1rem;
+  font-size: 0.3rem;
 }
 .cardOneContent i {
-  font-size: 0.1rem;
+  font-size: 0.3rem;
 }
 .cardOneContent > div span {
   color: #b2b2b2;
-  margin-right: 0.1rem;
+  margin-right: 0.3rem;
 }
 hr {
   border: none;
-  height: 0.1rem;
+  height: 0.3rem;
   background-color: #f6f6f6;
 }
