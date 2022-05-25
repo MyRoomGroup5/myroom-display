@@ -49,15 +49,15 @@ const CardOneComponent = (props: any) => {
   return (
     <div>
       <Card
-        title={<div style={{ fontSize: '1.5rem', fontWeight: 900 }}>卡片标题</div>}
+        title={<div style={{ fontSize: '0.5rem', fontWeight: 900 }}>卡片标题</div>}
         extra={
-          <div style={{ color: '#c5c5c5' }}>
+          <div style={{ color: '#c5c5c5', fontSize: '0.3rem' }}>
             <span>小区详情</span>
             <i className="iconfont icon-right-outlined"></i>
           </div>
         }
         onHeaderClick={onHeaderClick}
-        style={{ borderRadius: '1rem' }}
+        style={{ borderRadius: '0.1rem' }}
       >
         <div className={styles.cardOneContent}>
           <div>
@@ -65,7 +65,7 @@ const CardOneComponent = (props: any) => {
             {price}元/平
             <div
               className="iconfont icon-gushi"
-              style={{ color: '#f85701', display: 'inline', marginLeft: '1rem' }}
+              style={{ color: '#f85701', display: 'inline', marginLeft: '0.1rem' }}
             >
               环比上涨{rate}%
             </div>
@@ -92,10 +92,14 @@ const CardOneComponent = (props: any) => {
   )
 }
 
-// 第二章张卡片
+// interface CardTwoComponentProps{
+//   // 此处写props必备参数
+// }
+
+// 第二张卡片
 const CardTwoComponent = (props: any) => {
   const [introduction, setIntroduction] = useState(
-    '小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情',
+    '小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情小区概况详情',
   )
   const [infrastructure, setInfrastructure] = useState('小区概况详情')
   const [architecturalQuality, setArchitecturalQuality] = useState('小区概况详情')
@@ -105,64 +109,48 @@ const CardTwoComponent = (props: any) => {
   })
   return (
     <Card
-      headerStyle={{ border: 'none', marginBottom: '-1rem' }}
-      title={<div style={{ fontSize: '1.5rem', fontWeight: 900 }}>小区介绍</div>}
-      style={{ borderRadius: '1rem' }}
+      headerStyle={{
+        display: 'none',
+        border: 'none',
+        marginBottom: '-1rem',
+      }}
+      title={<div style={{ fontSize: '0.5rem', fontWeight: 900 }}>小区介绍</div>}
+      style={{ borderRadius: '0.1rem' }}
     >
       <Tabs
         style={{
-          '--title-font-size': '1.4rem',
-          fontWeight: 'bolder',
+          '--title-font-size': '0.4rem',
           '--active-title-color': '#ea7e61',
           '--active-line-color': '#ea7e61',
-          '--content-padding': '1rem',
+          '--content-padding': '0.4rem',
+          fontSize: '0.3rem',
           backgroundColor: '#f9f9f9',
         }}
-        stretch={false}
+        stretch={true}
         activeLineMode="fixed"
       >
         <Tabs.Tab title="小区概况" key="introduction">
-          <Ellipsis
-            direction="end"
-            content={introduction}
-            rows={3}
-            expandText="展开"
-            collapseText="收起"
-          />
+          {introduction}
         </Tabs.Tab>
         <Tabs.Tab title="基础设施" key="infrastructure">
-          <Ellipsis
-            direction="end"
-            content={infrastructure}
-            rows={3}
-            expandText="展开"
-            collapseText="收起"
-          />
+          {infrastructure}
         </Tabs.Tab>
         <Tabs.Tab title="建筑品质" key="architecturalQuality">
-          <Ellipsis
-            direction="end"
-            content={architecturalQuality}
-            rows={3}
-            expandText="展开"
-            collapseText="收起"
-          />
+          {architecturalQuality}
         </Tabs.Tab>
         <Tabs.Tab title="大堂楼栋" key="lobbyBuilding">
-          <Ellipsis
-            direction="end"
-            content={lobbyBuilding}
-            rows={3}
-            expandText="展开"
-            collapseText="收起"
-          />
+          {lobbyBuilding}
         </Tabs.Tab>
       </Tabs>
     </Card>
   )
 }
 
-const ApartmentComponent = (props: any) => {
+interface ApartmentComponentPros {
+  apartmentId: string
+}
+
+const ApartmentComponent = (props: ApartmentComponentPros) => {
   return (
     <div>
       <NavComponent></NavComponent>

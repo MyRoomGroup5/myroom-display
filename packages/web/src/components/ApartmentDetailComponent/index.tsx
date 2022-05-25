@@ -17,15 +17,17 @@ const ApartmentDetailNav = () => {
       duration: 1000,
     })
   const right = (
-    <div onClick={share} style={{ fontSize: 24 }}>
-      <Space style={{ '--gap': '16px' }}>
-        <i style={{ fontSize: '2.5rem' }} className="iconfont icon-fenxiang"></i>
-      </Space>
+    <div onClick={share}>
+      <i style={{ fontSize: '0.5rem' }} className="iconfont icon-fenxiang"></i>
     </div>
   )
   return (
-    <NavBar right={right} onBack={back}>
-      小区详情
+    <NavBar
+      right={right}
+      onBack={back}
+      style={{ '--height': '1rem', fontSize: '0.5rem', alignItems: 'center', display: 'flex' }}
+    >
+      <div style={{ fontSize: '0.5rem' }}>小区详情</div>
     </NavBar>
   )
 }
@@ -47,13 +49,13 @@ const ApartmentDetailHeader = () => {
     <div className={styles.ApartmentDetailHeader}>
       <h2 className={styles.postFix}>{headerTitle}</h2>
       <p>
-        <b style={{ color: '#f7631d', marginRight: '0.5rem' }}>{price}元/平</b>环比上月
+        <b style={{ color: '#f7631d', marginRight: '0.1rem' }}>{price}元/平</b>环比上月
         {increment >= 0 ? `涨${increment}%` : `跌${-increment}%`}
       </p>
       <p>
         {position.map((item, index) => {
           return (
-            <span key={index} style={{ marginRight: '0.5rem' }}>
+            <span key={index} style={{ marginRight: '0.1rem' }}>
               {item}
             </span>
           )
@@ -87,11 +89,11 @@ const ApartmentDetailCard = () => {
       }}
     >
       <div className={styles.ApartmentDetailCardLeft}>
-        <div style={{ fontSize: '3rem', fontWeight: 700 }}>{evaluate}</div>
+        <div style={{ fontSize: '1rem', fontWeight: 700 }}>{evaluate}</div>
         <div style={{ color: '#a2a2a2' }}>超过{transcend}%小区</div>
       </div>
       <div className={styles.ApartmentDetailCardRight}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
           <span>区域价值</span>
           <ProgressBar
             className={styles.ProgressBar}
@@ -103,7 +105,7 @@ const ApartmentDetailCard = () => {
           />
           <span>{price1.toFixed(1)}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
           <span>产品价值</span>
           <ProgressBar
             className={styles.ProgressBar}
@@ -115,7 +117,7 @@ const ApartmentDetailCard = () => {
           />
           <span>{price2.toFixed(1)}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
           <span>配套价值</span>
           <ProgressBar
             className={styles.ProgressBar}
@@ -127,7 +129,7 @@ const ApartmentDetailCard = () => {
           />
           <span>{price3.toFixed(1)}</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
           <span>交易价格</span>
           <ProgressBar
             className={styles.ProgressBar}
@@ -212,7 +214,7 @@ const GetInformation = (props: any) => {
       <div>
         {information.map((item, index) => {
           return (
-            <p style={{ fontSize: '1rem' }} key={index}>
+            <p style={{ fontSize: '0.1rem' }} key={index}>
               {item}
             </p>
           )
