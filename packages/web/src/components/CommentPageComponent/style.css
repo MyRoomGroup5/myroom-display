@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f3ecec;
+}
+
+.wrapper {
+  width: 85%;
+  margin: 0.8rem auto;
+  font-size: 1rem; /*14px*/
+  background-color: rgb(238, 229, 229);
+  border: 0.1rem solid #f1f1f1;
+  padding: 0.8rem;
+}
+
+/* 评论框样式 */
+.comment-input {
+  background-color: #fff;
+  border: 0.1rem solid #f1f1f1;
+  padding: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.comment-field {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.comment-field .comment-field-name {
+  display: flex;
+  flex-basis: 7rem;
+  font-size: 1rem;
+}
+
+.comment-field .comment-field-input {
+  display: flex;
+  flex: 1;
+}
+
+.textContainer {
+  margin-bottom: 0.75rem;
+}
+
+.comment-field-input input,
+.comment-field-input textarea {
+  border: 0.1rem solid #e6e6e6;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+  outline: none;
+  font-size: 1rem;
+  resize: none;
+  flex: 1;
+}
+
+.comment-field-input textarea {
+  height: 7rem;
+}
+
+.comment-field-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comment-field-button button {
+  padding: 0.4rem 0.8rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #00a3cf;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.comment-field-button button:active {
+  background: #13c1f1;
+}
+
+/* 评论列表样式 */
+.comment-list {
+  background-color: #fff;
+  border: 0.1rem, solid #f1f1f1;
+  padding: 1.3rem;
+}
+
+/* 评论组件样式 */
+.comment-outlayer {
+  width: 100%;
+  margin: 0 auto;
+}
+.comment {
+  position: relative;
+  display: flex;
+  border-bottom: 0.1rem solid #f1f1f1;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  min-height: 3rem;
+}
+
+.comment .comment-user {
+  flex-shrink: 0;
+}
+.contentContainer {
+  width: 95%;
+  margin: 0.3rem 0.2rem;
+}
+.comment-user {
+  display: flex;
+  margin: 0.25rem 0.2rem 0;
+}
+.avatar {
+  height: 80%;
+}
+.comment-username {
+  color: #00a3cf;
+  font-style: italic;
+  margin-left: 0.5em;
+  font-size: 0.4rem;
+}
+
+.extra {
+  /* padding-right: 0.5rem; */
+  position: absolute;
+  top: 0.3rem;
+  right: 0.2rem;
+  /* padding: 0.5rem; */
+  font-size: 0.3rem;
+}
+.comment h1 {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.images {
+  width: 2.5rem;
+  height: width;
+}
+.comment-createdtime {
+  padding-right: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.comment:hover .comment-delete {
+  color: #00a3cf;
+}
+
+.comment-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.comment p {
+  margin: 0;
+  font-size: 0.4rem;
+  /*text-indent: 2em;*/
+}
+
+code {
+  border: 0.1rem solid #ccc;
+  background: #f9f9f9;
+  padding: 0rem 0.2rem;
+}

@@ -1,0 +1,40 @@
+{
+  "Comments": [
+    {
+      "id": 1,
+      "username": "张三",
+      "date": "2020-10-11",
+      "room_type": "三室一厅",
+      "reason": "这就是我选择的理由",
+      "feel": "这就是我住在这里的感受",
+      "image_list": [],
+      "hasImage": false,
+      "imgNum": 0
+    },
+    {
+      "id": 2,
+      "username": "李四",
+      "date": "2020-11-10",
+      "room_type": "三室一厅",
+      "reason": "这就是我选择的理由",
+      "feel": "这就是我住在这里的感受巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
+      "image_list": [
+        "https://p1.haoduofangs.com/f100-image/SdL3xfz5h2wiTE~tplv-u148heywkg-default-v3:0:1125:0:0.jpeg?sig=SlvhS2Vbqdn9E_bpbsGl9WKF1Bs=",
+        "https://p1.haoduofangs.com/f100-image/SdL3xXkGzROE3X~tplv-u148heywkg-default-v3:0:1125:0:0.jpeg?sig=BD2A-P5cvCscvaN0jtqCMSwL2Jg="
+      ],
+      "hasImage": true,
+      "imgNum": 2
+    },
+    {
+      "id": 3,
+      "username": "王五",
+      "date": "2020-12-10",
+      "room_type": "三室一厅",
+      "reason": "这就是我选择的理由",
+      "feel": "这就是我住在这里的感受",
+      "image_list": [],
+      "hasImage": false,
+      "imgNum": 0
+    }
+  ]
+}

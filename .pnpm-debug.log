@@ -1,0 +1,24 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "E:\\usc class\\self learn\\code\\react\\myroom-display"
+  },
+  "1 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "not found: u",
+      "code": "ENOENT",
+      "stack": "Error: not found: u\n    at getNotFoundError (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:41677:51)\n    at Function.whichSync [as sync] (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:41754:13)\n    at getCommandAbsolutePathSync (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:43319:44)\n    at default_1 (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:43328:32)\n    at C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:172151:39"
+    }
+  },
+  "2 error pnpm": {
+    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+    "prefix": "E:\\usc class\\self learn\\code\\react\\myroom-display",
+    "err": {
+      "name": "pnpm",
+      "message": "not found: u",
+      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+      "stack": "Error: not found: u\n    at getNotFoundError (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:41677:51)\n    at Function.whichSync [as sync] (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:41754:13)\n    at getCommandAbsolutePathSync (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:43319:44)\n    at default_1 (C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:43328:32)\n    at C:\\Users\\86159\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:172151:39"
+    }
+  }
+}
