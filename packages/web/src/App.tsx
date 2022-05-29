@@ -4,17 +4,20 @@ import CarouselComponent from './components/CarouselComponent'
 import ApartmentComponent from './components/ApartmentComponnet'
 import ApartmentDetailComponent from './components/ApartmentDetailComponent'
 import CommentCardComponent from './components/CommentCardComponent'
+import Login from './pages/Login'
 
 function App() {
   return (
-    <div className="flex-column app">
-      <CarouselComponent></CarouselComponent>
-      <PriceComponent></PriceComponent>
-      <CommentCardComponent></CommentCardComponent>
-      <ApartmentComponent></ApartmentComponent>
-      <ApartmentDetailComponent></ApartmentDetailComponent>
-      {/* <ApartmentDetailComponent /> */}
-    </div>
+    // <div className="flex-column app">
+    <>
+      {/*<CarouselComponent></CarouselComponent>*/}
+      {/*<PriceComponent></PriceComponent>*/}
+      {/*<CommentCardComponent></CommentCardComponent>*/}
+      {/*<ApartmentComponent></ApartmentComponent>*/}
+      {/*<ApartmentDetailComponent></ApartmentDetailComponent>*/}
+      {/* <ApartmentDetailComponent />*/}
+      <Login />
+    </>
   )
 }
 
