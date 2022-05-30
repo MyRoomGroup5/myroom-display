@@ -1,0 +1,10 @@
+{
+    "tags": ["唯一住房", "有电梯", "楼房新", "满五年"],
+    "basic_message": { "price": 417, "name": "鑫苑小区", "room_type": "2室2厅", "ares": 86.97 },
+    "detail_message": [{ "title": "楼层位置", "value": "高" },
+      { "title": "朝向", "value": "南北" },
+      { "title": "年代", "value": "2019年" },
+      { "title": "房屋类型", "value": "普通住宅" },
+      { "title": "电梯", "value": "有" }
+    ]
+}
