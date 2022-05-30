@@ -1,33 +1,24 @@
 import Koa from 'koa'
-import Router from 'koa-router'
 import koaStatic from 'koa-static'
 import koaBody from 'koa-body'
+import jwt from 'koa-jwt'
 import { config } from './config'
-import { PORT } from './constants'
+import run from './run'
+import { router } from './routers'
+import HttpException from './core/http-exception'
 
 const app = new Koa()
 
+// 定义错误类型
+global.errors = HttpException
+global.config = config
+
 app.use(koaBody())
 
-const router = new Router()
+app.use(jwt({ secret: global.config.security.secretKey }).unless({ path: [/[login,register]$/] }))
 
-router.get('/api', async (ctx, next) => {
-  ctx.body = { message: 'Hello World' }
-  await next()
-})
-
-router.post('/api/save', async (ctx, next) => {
-  console.log('save:', ctx.request.body)
-  // ...储存到数据库
-  ctx.body = { message: 'Save data successful', receivedData: ctx.request.body }
-  await next()
-})
-
-app.use(router.routes())
-app.use(router.allowedMethods())
+app.use(router())
 
 app.use(koaStatic(config.staticFilePath))
 
-app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`)
-})
+run(app.callback())

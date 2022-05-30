@@ -5,8 +5,8 @@ import Login from '@/pages/Login'
 function App() {
   return (
     <div className="flex-column app">
-      {/*<Login/>*/}
-      <RoomDetailPage />
+      <Login />
+      {/*<RoomDetailPage />*/}
     </div>
   )
 }
