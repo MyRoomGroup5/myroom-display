@@ -113,11 +113,12 @@ const RegisterForm = () => {
           throw new Error(err)
         })
       query.role = role
-      reqUserReg(query).then((res) => {
-        if (res.data.code === 200) {
+      reqUserReg(query).then((res: any) => {
+        console.log(res)
+        if (res.code === 200) {
           prompt('注册成功')
         } else {
-          return Promise.reject(res.data.msg)
+          prompt(res.msg)
         }
       })
     } catch (err) {

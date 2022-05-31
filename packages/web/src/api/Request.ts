@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
 
 const requests = axios.create({
   baseURL: '/api/v1',
@@ -26,11 +26,8 @@ requests.interceptors.request.use(
 
 // 响应拦截器
 requests.interceptors.response.use(
-  (res: AxiosResponse) => {
-    if (res.data.code === 200) {
-      return res.data
-    }
-    return Promise.reject(res.data)
+  (res: any) => {
+    return res.data
   },
   (error: any) => {
     return Promise.reject(error)
