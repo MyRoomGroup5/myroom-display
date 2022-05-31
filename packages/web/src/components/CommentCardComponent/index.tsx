@@ -1,7 +1,7 @@
 import React from 'react'
 import { Avatar, Card, Toast } from 'antd-mobile'
 import './style.css'
-
+import comments from '../CommentPageComponent/comments.json'
 export default function CommentCardComponent() {
   const onHeaderClick = () => {
     Toast.show('点击了卡片Header区域')
@@ -10,6 +10,8 @@ export default function CommentCardComponent() {
   const onBodyClick = () => {
     Toast.show('点击了卡片Body区域')
   }
+
+  const comment = comments.Comments[0]
   return (
     <div className="cardblock">
       <Card
@@ -23,14 +25,13 @@ export default function CommentCardComponent() {
         <div className="user-information">
           <Avatar src="" />
           <div className="user-information-text">
-            <div className="user-name">ZTL</div>
-            <div className="time-information">2020-02-05</div>
+            <div className="user-name">{comment.username}</div>
+            <div className="time-information">{comment.date}</div>
           </div>
         </div>
         <div className="card-content">
-          哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
-          哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
-          {/* 显示一百字 */}
+          {comment.reason}
+          {comment.feel}
         </div>
       </Card>
     </div>
