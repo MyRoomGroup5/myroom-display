@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 importers:
   packages/web:
     specifiers:
+      '@types/bmapgl': ^0.0.5
       '@types/react': ^18.0.0
       '@types/react-dom': ^18.0.0
       '@vitejs/plugin-react': ^1.3.0
@@ -15,6 +16,7 @@ importers:
       typescript: ^4.6.3
       vite: ^2.9.9
     dependencies:
+      '@types/bmapgl': 0.0.5
       antd-mobile: 5.12.5_ef5jwxihqo6n7gxfmzogljlgcm
       echarts: 5.3.2
       echarts-for-react: 3.0.2_echarts@5.3.2+react@18.1.0
@@ -540,6 +542,13 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
+
+  /@types/bmapgl/0.0.5:
+    resolution:
+      {
+        integrity: sha512-4LVndgKRKLT4OIgUENDb9Uf9CsT2FtIMvpfKxIQVerEYPEXlunof60qDJQb/+1bg78crv7QJiz71tfh6NfpHbg==,
+      }
+    dev: false
 
   /@types/js-cookie/2.2.7:
     resolution:
@@ -1412,10 +1421,10 @@ packages:
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
 
-  /rollup/2.74.0:
+  /rollup/2.74.1:
     resolution:
       {
-        integrity: sha512-RRwXTX5+ObPJhcMV6zP3RdHvy90/lBOUfbzL7IKkFjMJGAqeBGZiv9nZWm/DoTESaTE3GBkkzbU9QVN2AuCkjw==,
+        integrity: sha512-K2zW7kV8Voua5eGkbnBtWYfMIhYhT9Pel2uhBk2WO5eMee161nPze/XRfvEQPFYz7KgrCCnmh2Wy0AMFLGGmMA==,
       }
     engines: { node: '>=10.0.0' }
     hasBin: true
@@ -1556,7 +1565,7 @@ packages:
       esbuild: 0.14.39
       postcss: 8.4.14
       resolve: 1.22.0
-      rollup: 2.74.0
+      rollup: 2.74.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
