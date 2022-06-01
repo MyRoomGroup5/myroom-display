@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/bmapgl": "^0.0.5",
     "antd-mobile": "^5.12.5",
     "antd-mobile-icons": "^0.2.2",
     "axios": "^0.27.2",

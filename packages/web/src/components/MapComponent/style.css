@@ -1,0 +1,9 @@
+.map-component {
+  margin-top: 0.1rem;
+  height: 8rem;
+  max-width: none;
+}
+.map {
+  height: 6rem;
+  max-width: none;
+}
