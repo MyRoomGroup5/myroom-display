@@ -1,0 +1,64 @@
+{
+  "drawPanelData": [
+    {
+      "id": "image1",
+      "type": "IMAGE",
+      "data": "data:image/png;base64,iVBORw8PT1o1KhRfZ+WuKgbN25w5cpVrhcX49OiGc2aOucgpK4L51fSl4pv3MDHuxleRufrS+pH4oiGcn+U+tOsqSfXiorIu3AJ05WruqdIpXRfERERERFxHo/eCyf+B1L2wadLIcIXDE6REIjUnMJfzDN+CwphfE8YGlg3x33qAdh3Dl7fVTfHE+f0l17mvlDfnIiIiIiIiIiIiIiIi4AIW/IiIiIiIiIiIiIiIiIiIuQOGviIiIiIiIiIiIiIiIiIgLUPgrIiIiIiIiIiIiIiIiIuICFP6KiIiIiIiIiIiIiIiIiLgAhb8iIiIiIiIiIiIiIiIiIi5A4a+IiIiIiIiIiIiIiIiIiAtQ+CsiIiIiIiIiIiIiIiIi4gIU/oqIiIiIiIiIiIiIiIiIuACFvyIiIiIiIiIiIiIiIiIiLuD/Ax/NfCdavzuiAAAAAElFTkSuQmCC",
+      "width": "200px",
+      "height": "200px",
+      "left": "200px",
+      "top": "200px"
+    },
+    {
+      "id": "text-1",
+      "type": "TEXT",
+      "data": "我是 1 号文字",
+      "fontSize": "12px",
+      "color": "#FF0000",
+      "width": "100px",
+      "height": "20px",
+      "left": "100px",
+      "top": "100px"
+    },
+    {
+      "id": "text-2",
+      "type": "TEXT",
+      "data": "我是 2 号文字",
+      "fontSize": "12px",
+      "color": "#00FF00",
+      "width": "100px",
+      "height": "20px",
+      "left": "100px",
+      "top": "150px"
+    },
+    {
+      "id": "text-3",
+      "type": "TEXT",
+      "data": "我是 3 号文字",
+      "fontSize": "12px",
+      "color": "#0000FF",
+      "width": "100px",
+      "height": "20px",
+      "left": "100px",
+      "top": "200px"
+    },
+    {
+      "id": "ROOM_CARD-5",
+      "type": "ROOM_CARD",
+      "fontSize": "12px",
+      "left": "228px",
+      "top": "512px",
+      "data": {
+        "imgURL": "/src/assets/img/room.png",
+        "roomStructure": "9室3厅",
+        "listingName": "龙湖颐和原著院里",
+        "totalPrice": 3456,
+        "pricing": 200100,
+        "squaremeter": 1999,
+        "facingType": "南北",
+        "floorLevel": "低",
+        "keywords": ["近地铁", "繁华商圈", "低密度", "环境优雅"]
+      }
+    }
+  ]
+}
