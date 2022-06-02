@@ -1,5 +1,6 @@
 import PriceComponent from '@/components/PriceComponent'
 import CarouselComponent from '@/components/CarouselComponent'
+import MapComponent from '@/components/MapComponent'
 import ApartmentComponent from '@/components/ApartmentComponnet'
 import ApartmentDetailComponent from '@/components/ApartmentDetailComponent'
 import CommentCardComponent from '@/components/CommentCardComponent'
@@ -12,6 +13,7 @@ const RoomDetailPage = () => {
       <CarouselComponent />
       <ApartmentComponent apartmentId="1" />
       <CommentCardComponent />
+      <MapComponent />
       <PriceComponent />
       {/*<ApartmentDetailComponent/>*/}
       <CommentPageComponent />
