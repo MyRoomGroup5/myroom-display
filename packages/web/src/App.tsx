@@ -9,8 +9,8 @@ function App() {
     <div className="flex-column app">
       <RoomDetailComponent />
       <RoomCard />
-      <RoomDetailPage />
-      <Login />
+      {/*<RoomDetailPage />*/}
+      {/*<Login />*/}
     </div>
   )
 }

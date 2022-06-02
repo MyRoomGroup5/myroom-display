@@ -4,7 +4,7 @@ import { PORT } from './constants'
 async function run(listener: http.RequestListener) {
   const server = http.createServer(listener)
   let port = PORT
-  while (port < 10000) {
+  while (true) {
     try {
       await listen(port)
       return
