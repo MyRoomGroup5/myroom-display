@@ -3,7 +3,7 @@
     {
       "id": "image1",
       "type": "IMAGE",
-      "data": "data:image/png;base64,iVBORw8PT1o1KhRfZ+WuKgbN25w5cpVrhcX49OiGc2aOucgpK4L51fSl4pv3MDHuxleRufrS+pH4oiGcn+U+tOsqSfXiorIu3AJ05WruqdIpXRfERERERFxHo/eCyf+B1L2wadLIcIXDE6REIjUnMJfzDN+CwphfE8YGlg3x33qAdh3Dl7fVTfHE+f0l17mvlDfnIiIiIiIiIiIiIiIi4AIW/IiIiIiIiIiIiIiIiIiIuQOGviIiIiIiIiIiIiIiIiIgLUPgrIiIiIiIiIiIiIiIiIuICFP6KiIiIiIiIiIiIiIiIiLgAhb8iIiIiIiIiIiIiIiIiIi5A4a+IiIiIiIiIiIiIiIiIiAtQ+CsiIiIiIiIiIiIiIiIi4gIU/oqIiIiIiIiIiIiIiIiIuACFvyIiIiIiIiIiIiIiIiIiLuD/Ax/NfCdavzuiAAAAAElFTkSuQmCC",
+      "data": "https://img-blog.csdnimg.cn/20190313134722385.png",
       "width": "200px",
       "height": "200px",
       "left": "200px",
@@ -46,10 +46,10 @@
       "id": "ROOM_CARD-5",
       "type": "ROOM_CARD",
       "fontSize": "12px",
-      "left": "228px",
-      "top": "512px",
+      "left": "0px",
+      "top": "450px",
       "data": {
-        "imgURL": "/src/assets/img/room.png",
+        "imgURL": "https://img-blog.csdnimg.cn/20190313134722385.png",
         "roomStructure": "9室3厅",
         "listingName": "龙湖颐和原著院里",
         "totalPrice": 3456,
@@ -59,6 +59,24 @@
         "floorLevel": "低",
         "keywords": ["近地铁", "繁华商圈", "低密度", "环境优雅"]
       }
+    },
+    {
+      "id": "audio1",
+      "type": "AUDIO",
+      "data": "https://www.cambridgeenglish.org/images/153149-movers-sample-listening-test-vol2.mp3",
+      "width": "160px",
+      "height": "90px",
+      "left": "0px",
+      "top": "500px"
+    },
+    {
+      "id": "video1",
+      "type": "VIDEO",
+      "data": "https://prod-streaming-video-msn-com.akamaized.net/e908e91f-370f-49ad-b4ce-775b7e7a05b4/a6287f74-46f0-42f9-b5d9-997f00585696.mp4",
+      "width": "250px",
+      "height": "150px",
+      "left": "0px",
+      "top": "600px"
     }
   ]
 }
