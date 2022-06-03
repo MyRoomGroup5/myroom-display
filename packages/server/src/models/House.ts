@@ -32,6 +32,7 @@ class House extends Model {
   declare property_management_type: number
   declare elevator: number
   declare property_certificate_period: number
+  declare imgurl?: string
 }
 
 House.init(

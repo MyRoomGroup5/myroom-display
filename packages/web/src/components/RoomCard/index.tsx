@@ -6,7 +6,7 @@ const RoomCard = () => {
     <Card style={{ padding: '0.3rem' }}>
       <img
         src="/room.webp"
-        alt=""
+        alt="房源卡片展示"
         style={{ width: '3.5rem', height: '2.5rem', float: 'left', paddingRight: '0.4rem' }}
       />
       <div>

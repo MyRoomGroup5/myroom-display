@@ -12,6 +12,7 @@ class HouseDao {
           'listing_name',
           'pricing',
           'squaremeter',
+          'neighborhood_name',
           'floor_plan_room',
           'floor_plan_hall',
         ],
@@ -22,16 +23,16 @@ class HouseDao {
         throw new Error('查询房源列表错误')
       }
       const data = house_list.map((item) => {
+        item.imgurl =
+          'https://p1.haoduofangs.com/f100-image/SoFvHtguJ42G~tplv-u148heywkg-default-v3:0:424:0:0.jpeg?sig=xOUEYHTdwbIbPqXFYti0f50wXkc='
         if (typeof item.pricing === 'number') {
-          item.pricing /= 100
+          item.pricing /= 1000000
         } else {
-          item.pricing /= 100n
+          item.pricing /= 1000000n
         }
         item.squaremeter /= 100
-
         return item
       })
-
       return [null, data]
     } catch (err: any) {
       return [err, null]

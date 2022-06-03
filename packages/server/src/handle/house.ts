@@ -1,7 +1,6 @@
 import { Context } from 'vm'
 import { Resolve } from '../core/resolve'
 import { HouseDao } from '../dao/house'
-import { house_item_type, house_title_detail } from '../dao/type'
 
 const res = new Resolve()
 

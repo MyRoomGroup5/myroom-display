@@ -15,7 +15,7 @@ global.config = config
 
 app.use(koaBody())
 
-app.use(jwt({ secret: global.config.security.secretKey }).unless({ path: [/[login,register]$/] }))
+app.use(jwt({ secret: global.config.security.secretKey }).unless({ path: [/[login|register]$/] }))
 
 app.use(router())
 
