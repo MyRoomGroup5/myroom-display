@@ -38,9 +38,12 @@ importers:
       '@types/bcryptjs': ^2.4.2
       '@types/jsonwebtoken': ^8.5.8
       '@types/koa': ^2.13.4
+      '@types/koa-range': ^0.3.2
       '@types/koa-router': ^7.4.4
       '@types/koa-static': ^4.0.2
-      '@types/node': ^17.0.33
+      '@types/koa2-cors': ^2.0.2
+      '@types/multiparty': ^0.0.33
+      '@types/node': ^17.0.38
       '@types/require-directory': ^2.1.2
       '@types/validator': ^13.7.2
       bcryptjs: ^2.4.3
@@ -50,9 +53,12 @@ importers:
       koa-body: ^5.0.0
       koa-combine-routers: ^4.0.2
       koa-jwt: ^4.0.3
+      koa-range: ^0.3.0
       koa-router: ^10.1.1
       koa-static: ^5.0.0
+      koa2-cors: ^2.0.6
       moment: ^2.29.3
+      multiparty: ^4.2.3
       mysql2: ^2.3.3
       reflect-metadata: ^0.1.13
       require-directory: ^2.1.1
@@ -60,6 +66,9 @@ importers:
       sequelize-typescript: ^2.1.3
     dependencies:
       '@types/jsonwebtoken': 8.5.8
+      '@types/koa-range': 0.3.2
+      '@types/koa2-cors': 2.0.2
+      '@types/multiparty': 0.0.33
       '@types/node': 17.0.38
       '@types/validator': 13.7.2
       bcryptjs: 2.4.3
@@ -68,9 +77,12 @@ importers:
       koa-body: 5.0.0
       koa-combine-routers: 4.0.2
       koa-jwt: 4.0.3
+      koa-range: 0.3.0
       koa-router: 10.1.1
       koa-static: 5.0.0
+      koa2-cors: 2.0.6
       moment: 2.29.3
+      multiparty: 4.2.3
       mysql2: 2.3.3
       reflect-metadata: 0.1.13
       require-directory: 2.1.1
@@ -97,6 +109,7 @@ importers:
       echarts-for-react: ^3.0.2
       lib-flexible: ^0.3.2
       react: ^18.0.0
+      react-audio-player: ^0.17.0
       react-dom: ^18.0.0
       react-redux: ^8.0.2
       redux: ^4.2.0
@@ -111,6 +124,7 @@ importers:
       echarts-for-react: 3.0.2_echarts@5.3.2+react@18.1.0
       lib-flexible: 0.3.2
       react: 18.1.0
+      react-audio-player: 0.17.0_ef5jwxihqo6n7gxfmzogljlgcm
       react-dom: 18.1.0_react@18.1.0
       react-redux: 8.0.2_d5prddqdjf6tcianjubzhf4vay
       redux: 4.2.0
@@ -1155,6 +1169,15 @@ packages:
     dependencies:
       '@types/koa': 2.13.4
 
+  /@types/koa-range/0.3.2:
+    resolution:
+      {
+        integrity: sha512-xKZPH9nb1Znv0rNTubjcI1J/1ZJpqsi2xOLuS1jPE5984ZPE2hlx1okOpXoENgd00HFbxpVmDDguPLYrGuvOcQ==,
+      }
+    dependencies:
+      '@types/koa': 2.13.4
+    dev: false
+
   /@types/koa-router/7.4.4:
     resolution:
       {
@@ -1197,6 +1220,15 @@ packages:
       '@types/koa-compose': 3.2.5
       '@types/node': 17.0.38
 
+  /@types/koa2-cors/2.0.2:
+    resolution:
+      {
+        integrity: sha512-S7D//zbF0oJJJ7l6eFT2ThXPCjxHOv84HKMKiZPmVu51Bf4GWZGbTZDedIoUo/aXEIwTnfKbSiod/vqidfDwjg==,
+      }
+    dependencies:
+      '@types/koa': 2.13.4
+    dev: false
+
   /@types/mime/1.3.2:
     resolution:
       {
@@ -1215,6 +1247,15 @@ packages:
       {
         integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==,
       }
+    dev: false
+
+  /@types/multiparty/0.0.33:
+    resolution:
+      {
+        integrity: sha512-Il6cJUpSqgojT7NxbVJUvXkCblm50/yEJYtblISDsNIeNYf4yMAhdizzidUk6h8pJ8yhwK/3Fkb+3Dwcgtwl8w==,
+      }
+    dependencies:
+      '@types/node': 17.0.38
     dev: false
 
   /@types/node/17.0.38:
@@ -4509,6 +4550,16 @@ packages:
       p-any: 2.1.0
     dev: false
 
+  /koa-range/0.3.0:
+    resolution:
+      {
+        integrity: sha512-Ich3pCz6RhtbajYXRWjIl6O5wtrLs6kE3nkXc9XmaWe+MysJyZO7K4L3oce1Jpg/iMgCbj+5UCiMm/rqVtcDIg==,
+      }
+    engines: { node: '>=7' }
+    dependencies:
+      stream-slice: 0.1.2
+    dev: false
+
   /koa-router/10.1.1:
     resolution:
       {
@@ -4591,6 +4642,14 @@ packages:
       vary: 1.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /koa2-cors/2.0.6:
+    resolution:
+      {
+        integrity: sha512-JRCcSM4lamM+8kvKGDKlesYk2ASrmSTczDtGUnIadqMgnHU4Ct5Gw7Bxt3w3m6d6dy3WN0PU4oMP43HbddDEWg==,
+      }
+    engines: { node: '>= 7.6.0' }
     dev: false
 
   /levn/0.4.1:
@@ -4980,6 +5039,18 @@ packages:
         integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==,
       }
 
+  /multiparty/4.2.3:
+    resolution:
+      {
+        integrity: sha512-Ak6EUJZuhGS8hJ3c2fY6UW5MbkGUPMBEGd13djUzoY/BHqV/gTuFWtC6IuVA7A2+v3yjBS6c4or50xhzTQZImQ==,
+      }
+    engines: { node: '>= 0.10' }
+    dependencies:
+      http-errors: 1.8.1
+      safe-buffer: 5.2.1
+      uid-safe: 2.1.5
+    dev: false
+
   /mysql2/2.3.3:
     resolution:
       {
@@ -5113,7 +5184,6 @@ packages:
         integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==,
       }
     engines: { node: '>=0.10.0' }
-    dev: true
 
   /object-inspect/1.12.2:
     resolution:
@@ -5515,7 +5585,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /pseudomap/1.0.2:
     resolution: { integrity: sha1-8FKijacOYYkX7wqKw0wa5aaChrM= }
@@ -5567,6 +5636,14 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
+  /random-bytes/1.0.0:
+    resolution:
+      {
+        integrity: sha512-iv7LhNVO047HzYR3InF6pUcUsPQiHTM1Qal51DcGSuZFBil1aBBWG5eHPNek7bvILMaYJ/8RU1e8w1AMdHmLQQ==,
+      }
+    engines: { node: '>= 0.8' }
+    dev: false
+
   /raw-body/2.5.1:
     resolution:
       {
@@ -5611,6 +5688,20 @@ packages:
       react-dom: 18.1.0_react@18.1.0
       react-is: 16.13.1
       shallowequal: 1.1.0
+    dev: false
+
+  /react-audio-player/0.17.0_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution:
+      {
+        integrity: sha512-aCZgusPxA9HK7rLZcTdhTbBH9l6do9vn3NorgoDZRxRxJlOy9uZWzPaKjd7QdcuP2vXpxGA/61JMnnOEY7NXeA==,
+      }
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
     dev: false
 
   /react-dom/18.1.0_react@18.1.0:
@@ -6283,7 +6374,10 @@ packages:
     dev: false
 
   /statuses/1.5.0:
-    resolution: { integrity: sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow= }
+    resolution:
+      {
+        integrity: sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==,
+      }
     engines: { node: '>= 0.6' }
     dev: false
 
@@ -6293,6 +6387,13 @@ packages:
         integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==,
       }
     engines: { node: '>= 0.8' }
+    dev: false
+
+  /stream-slice/0.1.2:
+    resolution:
+      {
+        integrity: sha512-QzQxpoacatkreL6jsxnVb7X5R/pGw9OUv2qWTYWnmLpg4NdN31snPy/f3TdQE1ZUXaThRvj1Zw4/OGg0ZkaLMA==,
+      }
     dev: false
 
   /string-argv/0.3.1:
@@ -6699,6 +6800,16 @@ packages:
     engines: { node: '>=4.2.0' }
     hasBin: true
     dev: true
+
+  /uid-safe/2.1.5:
+    resolution:
+      {
+        integrity: sha512-KPHm4VL5dDXKz01UuEd88Df+KzynaohSL9fBh096KWAxSKZQDI2uBrVqtvRM4rwrIrRRKsdLNML/lnaaVSRioA==,
+      }
+    engines: { node: '>= 0.8' }
+    dependencies:
+      random-bytes: 1.0.0
+    dev: false
 
   /unbox-primitive/1.0.2:
     resolution:
