@@ -1,9 +1,13 @@
 import React from 'react'
 import { Card } from 'antd-mobile'
-
+import { useNavigate } from 'react-router-dom'
 const RoomCard = () => {
+  const navigate = useNavigate()
+  const back = () => {
+    navigate(`/MyRoom/RoomDetailPage`)
+  }
   return (
-    <Card style={{ padding: '0.3rem' }}>
+    <Card style={{ padding: '0.3rem' }} onClick={back}>
       <img
         src="/room.webp"
         alt="房源卡片展示"

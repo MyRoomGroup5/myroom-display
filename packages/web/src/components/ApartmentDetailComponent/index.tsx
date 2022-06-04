@@ -2,15 +2,18 @@ import { FloatingPanel, List, NavBar, Toast, Space, Card, ProgressBar, Button } 
 import { useEffect, useState } from 'react'
 import styles from './style.module.css'
 import './iconfont/iconfont.css'
+import { useNavigate } from 'react-router-dom'
+
 const data = ['区域描述', '地块价值', '发展前景', '卖点概述']
 
 // 小区介绍详情页导航栏
 const ApartmentDetailNav = () => {
-  const back = () =>
-    Toast.show({
-      content: '点击了返回区域',
-      duration: 1000,
-    })
+  const navigate = useNavigate()
+  const back = () => navigate('/MyRoom/RoomDetailPage')
+  // Toast.show({
+  //   content: '点击了返回区域',
+  //   duration: 1000,
+  // })
   const share = () =>
     Toast.show({
       content: '点击了分享按钮',

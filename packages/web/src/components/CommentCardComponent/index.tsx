@@ -2,9 +2,11 @@ import React from 'react'
 import { Avatar, Card, Toast } from 'antd-mobile'
 import './style.css'
 import comments from '../CommentPageComponent/comments.json'
+import { useNavigate } from 'react-router-dom'
 export default function CommentCardComponent() {
+  const navigate = useNavigate()
   const onHeaderClick = () => {
-    Toast.show('点击了卡片Header区域')
+    navigate('/MyRoom/CommentPageComponent')
   }
 
   const onBodyClick = () => {
@@ -19,7 +21,7 @@ export default function CommentCardComponent() {
         extra="查看全部>"
         onBodyClick={onBodyClick}
         onHeaderClick={onHeaderClick}
-        style={{ borderRadius: '16px' }}
+        style={{ borderRadius: '16px', cursor: 'pointer' }}
       >
         {/* <div className='extra-information'>附加信息</div> */}
         <div className="user-information">

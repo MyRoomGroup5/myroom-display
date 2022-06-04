@@ -1,13 +1,12 @@
 import axios from 'axios'
 import { useEffect } from 'react'
 import './App.css'
-import Login from './pages/Login'
-import RoomDetailComponent from './components/RoomDetailCompoment'
-import RoomCard from './components/RoomCard'
-import RoomDetailPage from '@/pages/RoomDetailPage'
-import RoomActivityPage from './pages/RoomActivityPage'
-import roomDetailData from './mock/roomDetailData.json'
+
 import activityData from './mock/activityData.json'
+
+import { BrowserRouter as Router, Routes } from 'react-router-dom'
+import RouterBeforeEach from './FrontendAuth'
+import { MyRouter } from './router'
 
 function App() {
   useEffect(() => {
@@ -23,13 +22,12 @@ function App() {
   })
 
   return (
-    <div className="flex-column app">
-      {/* <RoomDetailComponent />
-      <RoomCard />
-      <RoomDetailPage />
-      <Login /> */}
-      <RoomActivityPage />
-    </div>
+    <Router>
+      <div className="flex-column app">
+        <RouterBeforeEach></RouterBeforeEach>
+        <MyRouter></MyRouter>
+      </div>
+    </Router>
   )
 }
 
