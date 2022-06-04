@@ -7,6 +7,32 @@ class House extends Model {
   declare first_upload_at: Date
   declare pricing: bigint | number
   declare squaremeter: number
+  declare floor: number
+  declare total_floor: number
+  declare dict_house_id: bigint | number
+  declare heating_type: number
+  declare house_duration: number
+  declare floor_level: number
+  declare facing_type: number
+  declare decoration_type: number
+  declare building_type: number
+  declare built_year: string
+  declare city_name: string
+  declare city_code: string
+  declare neighborhood_name: string
+  declare neighborhood_source_code: string
+  declare floor_plan_room: number
+  declare floor_plan_hall: number
+  declare floor_plan_bath: number
+  declare floor_plan_kitchen: number
+  declare house_type: number
+  declare layout_type: number
+  declare last_publish_time: Date
+  declare ownership: number
+  declare property_management_type: number
+  declare elevator: number
+  declare property_certificate_period: number
+  declare imgurl?: string
 }
 
 House.init(

@@ -26,14 +26,12 @@ const LoginForm = () => {
         .catch((err) => {
           return err
         })
-      console.log('success', query)
       reqUserLogin(query)
         .then((res) => {
-          console.log('登录成功', res)
           localStorage.setItem('token', res.data.token)
         })
         .catch((err) => {
-          console.log('登录失败', err)
+          prompt(err.msg)
         })
     } catch {
       prompt('填入信息错误，请检查输入')
