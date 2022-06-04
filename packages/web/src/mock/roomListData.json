@@ -1,0 +1,94 @@
+{
+  "roomListData": [
+    {
+      "id": 65140,
+      "listing_name": "aa",
+      "pricing": 410,
+      "squaremeter": 128.7,
+      "neighborhood_name": "西溪里二期",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 103612,
+      "listing_name": "鑫苑小区 2室 2厅 86平米",
+      "pricing": 51,
+      "squaremeter": 86,
+      "neighborhood_name": "鑫苑小区",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 123435,
+      "listing_name": "富力城小区 2室 2厅 86.97平米",
+      "pricing": 160,
+      "squaremeter": 86.97,
+      "neighborhood_name": "富力城小区",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 124010,
+      "listing_name": "中海碧林湾 4室 2厅 137平米",
+      "pricing": 360,
+      "squaremeter": 137,
+      "neighborhood_name": "中海碧林湾",
+      "floor_plan_room": 4,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 124936,
+      "listing_name": "中建群星汇 2室 2厅 88平米",
+      "pricing": 190,
+      "squaremeter": 88,
+      "neighborhood_name": "中建群星汇",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 125071,
+      "listing_name": "奥达文景观园 2室 2厅 90平米",
+      "pricing": 80,
+      "squaremeter": 90,
+      "neighborhood_name": "奥达文景观园",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 127625,
+      "listing_name": "万科金域曲江 2室 2厅 77.61平米",
+      "pricing": 200,
+      "squaremeter": 77.61,
+      "neighborhood_name": "万科金域曲江",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 130855,
+      "listing_name": "碧水西岸南湖1号 4室 2厅 210平米",
+      "pricing": 700,
+      "squaremeter": 210,
+      "neighborhood_name": "碧水西岸南湖1号",
+      "floor_plan_room": 4,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 131155,
+      "listing_name": "曲江龙邸 2室 2厅 96.57平米",
+      "pricing": 130,
+      "squaremeter": 96.57,
+      "neighborhood_name": "曲江龙邸",
+      "floor_plan_room": 2,
+      "floor_plan_hall": 2
+    },
+    {
+      "id": 131238,
+      "listing_name": "金地湖城大境 3室 2厅 108平米",
+      "pricing": 210,
+      "squaremeter": 108,
+      "neighborhood_name": "金地湖城大境",
+      "floor_plan_room": 3,
+      "floor_plan_hall": 2
+    }
+  ]
+}
