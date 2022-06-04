@@ -4,7 +4,8 @@ import { DataTypes, Model } from 'sequelize'
 class Active extends Model {
   declare id: number
   declare type: string
-  declare data: string
+  declare data: null | undefined
+  declare value?: null
   declare width: number
   declare height: number
   declare left: string
@@ -17,16 +18,16 @@ class Active extends Model {
 Active.init(
   {
     id: {
-      type: DataTypes.INTEGER().UNSIGNED,
+      type: DataTypes.STRING,
       primaryKey: true,
-      autoIncrement: true,
+      // autoIncrement: true,
       comment: '每个数据主键',
     },
-    page_id: {
-      type: DataTypes.INTEGER(),
-      allowNull: true,
-      comment: '活动页主键',
-    },
+    // page_id: {
+    //   type: DataTypes.INTEGER(),
+    //   allowNull: true,
+    //   comment: '活动页主键',
+    // },
     type: {
       type: DataTypes.STRING(50),
       allowNull: false,
@@ -40,15 +41,17 @@ Active.init(
     },
     value: {
       type: DataTypes.JSON,
+      allowNull: true,
+      comment: '房源卡片数据',
     },
     width: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       comment: '宽度',
     },
     height: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       comment: '高度',
     },
     left: {

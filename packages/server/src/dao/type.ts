@@ -57,13 +57,25 @@ export const house_title_detail: HouseDetail = {
   property_certificate_period: '房本年限',
 }
 
-const house_key_value = new Map()
-
 interface house_item_type {
   title: string | undefined
   value: string | number | Date | bigint
 }
 
+interface ActiveType {
+  id: number
+  type: string
+  data?: string
+  value?: string
+  width?: number
+  height?: number
+  left?: string
+  top?: string
+  color?: string
+  fontSize?: string
+}
+
 // export { house_title_detail }
 export type { house_item_type }
 export type { HouseDetail }
+export type { ActiveType }

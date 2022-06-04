@@ -9,6 +9,6 @@ router_agent.post('/upload', setVideo)
 
 router_agent.post('/agent', setActive)
 
-router_agent.get('/agent/:id', getActive)
+router_agent.get('/agent/show', getActive)
 
 export { router_agent }

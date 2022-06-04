@@ -23,8 +23,7 @@ const setActive = async (ctx: Context) => {
   }
 }
 const getActive = async (ctx: Context) => {
-  const { id } = ctx.params
-  const [err, data] = await ActiveDao.getactive(id)
+  const [err, data] = await ActiveDao.getactive()
   if (err) {
     ctx.body = res.fail(err as Error)
   }
