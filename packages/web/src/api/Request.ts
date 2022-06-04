@@ -15,7 +15,7 @@ requests.interceptors.request.use(
       'Content-Type': 'application/json',
     }
     if (token) {
-      config.headers.token = token
+      config.headers.Authorization = 'Bearer ' + token
     }
     return config
   },

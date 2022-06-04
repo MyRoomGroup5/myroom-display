@@ -2,45 +2,39 @@ import PriceComponent from '@/components/PriceComponent'
 import CarouselComponent from '@/components/CarouselComponent'
 import MapComponent from '@/components/MapComponent'
 import ApartmentComponent from '@/components/ApartmentComponnet'
-import ApartmentDetailComponent from '@/components/ApartmentDetailComponent'
 import CommentCardComponent from '@/components/CommentCardComponent'
-import CommentPageComponent from '../../components/CommentPageComponent'
 import style from './style.module.css'
 import { useEffect, useState } from 'react'
 import { reqHouseDetail } from '../../api'
-
-interface figureType {
-  url: string
-  size: string
-  type: string
-  desc: string
-}
+import RoomDetailComponent from '../../components/RoomDetailCompoment'
 
 const RoomDetailPage = () => {
-  const [figure, setFigure] = useState<figureType[]>([])
+  const [onEnd, setEnd] = useState(false)
   const [price, setPrice] = useState()
   const [location, setLocation] = useState()
   useEffect(() => {
-    reqHouseDetail(123435).then((res) => {
-      if (res.status === 200) {
-        setFigure(res.data.figure)
+    reqHouseDetail(123435).then((res: any) => {
+      if (res.code === 200) {
         setPrice(res.data.price)
         setLocation(res.data.location)
+        setEnd(true)
       }
     })
-  })
-
-  return (
-    <div className={style.flexColumn}>
-      <CarouselComponent figures={figure} />
-      <ApartmentComponent apartmentId="1" />
-      <CommentCardComponent />
-      <MapComponent />
-      <PriceComponent price={price} />
-      {/*<ApartmentDetailComponent/>*/}
-      <CommentPageComponent />
-    </div>
-  )
+  }, [])
+  if (onEnd) {
+    return (
+      <div className={style.flexColumn}>
+        <CarouselComponent />
+        <RoomDetailComponent />
+        <ApartmentComponent apartmentId="1" />
+        <CommentCardComponent />
+        <MapComponent location={location} />
+        <PriceComponent price={price} />
+      </div>
+    )
+  } else {
+    return <h1>加载中......</h1>
+  }
 }
 
 export default RoomDetailPage

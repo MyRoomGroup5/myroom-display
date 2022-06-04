@@ -29,7 +29,7 @@ app.use(cors())
 app.use(KoaRange)
 app.use(serve('/static'))
 
-// app.use(jwt({ secret: global.config.security.secretKey }).unless({ path: [/[login|register]$/] }))
+app.use(jwt({ secret: global.config.security.secretKey }).unless({ path: [/[login|register]$/] }))
 
 app.use(router())
 

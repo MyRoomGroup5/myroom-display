@@ -1,9 +1,14 @@
 import ReactAudioPlayer from 'react-audio-player'
 import agent from '../../mock/activityData.json'
 import './style.css'
+import { useNavigate } from 'react-router-dom'
 const RoomActivityPage = () => {
   const res = []
   const agentdata = agent.drawPanelData
+  const navigate = useNavigate()
+  const toDetail = () => {
+    navigate('/MyRoom/RoomDetailComponent')
+  }
   for (const i in agentdata) {
     const currentdata = agentdata[i]
     const datatype = currentdata.type
@@ -75,6 +80,7 @@ const RoomActivityPage = () => {
               left: currentdata.left,
               top: currentdata.top,
             }}
+            onClick={toDetail}
             className="room-card-draw"
           >
             <img src={data.imgURL} alt="房源图片加载错误" />

@@ -55,10 +55,31 @@ const getHouseDetail = async (ctx: Context) => {
       }
     })
   }
+  const location = {
+    lng: 118.030164,
+    lat: 24.494915,
+  }
+  const price = {
+    district: {
+      name: '海沧',
+      value: [3.13, 3.07, 3.07, 3.05, 3.07, 3.04],
+    },
+    avenue: {
+      name: '海沧区政府',
+      value: [3.1, 3.08, 3.1, 3.12, 3.09, 3.1],
+    },
+    community: {
+      name: '兴港花园三期',
+      value: [3.09, 3.08, 3.08, 3.11, 3.11, 3.11],
+    },
+    date: ['12月', '01月', '02月', '03月', '04月', '05月'],
+  }
   const data = {
     tags,
     basic_message,
     detail_message,
+    price,
+    location,
   }
   ctx.body = res.json(data)
 }

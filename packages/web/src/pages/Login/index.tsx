@@ -31,7 +31,7 @@ const LoginForm = () => {
       reqUserLogin(query)
         .then((res) => {
           localStorage.setItem('token', res.data.token)
-          navigate(`/RoomActivityPage`)
+          navigate(`/MyRoom/RoomActivityPage`)
         })
         .catch((err) => {
           prompt(err.msg)

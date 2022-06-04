@@ -214,8 +214,7 @@ const ApartmentComponent = (props: ApartmentComponentPros) => {
   return (
     <div>
       <ApartmentDetailNav />
-      <CarouselComponent />
-      <NavComponent></NavComponent>
+      <NavComponent />
       <CardOneComponent apartmentId={props.apartmentId} />
       <CardTwoComponent apartmentId={props.apartmentId} />
     </div>

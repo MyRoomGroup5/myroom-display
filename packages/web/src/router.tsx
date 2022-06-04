@@ -15,7 +15,7 @@ const routes: any = [
   },
   {
     path: '/MyRoom/RoomDetailComponent',
-    component: lazy(() => import('./components/RoomDetailCompoment')),
+    component: lazy(() => import('./pages/RoomDetailPage')),
     auth: true,
   },
   {
