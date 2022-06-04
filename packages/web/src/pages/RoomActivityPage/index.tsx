@@ -1,5 +1,5 @@
 import ReactAudioPlayer from 'react-audio-player'
-import agent from './agent.json'
+import agent from '../../mock/activityData.json'
 import './style.css'
 const RoomActivityPage = () => {
   const res = []

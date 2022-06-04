@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { NavBar, Space, NoticeBar, Toast, Card, Tabs, Ellipsis } from 'antd-mobile'
 import styles from './style.module.css'
 import './iconfont/iconfont.css'
-
+import CarouselComponent from '@/components/CarouselComponent'
+import { useNavigate } from 'react-router-dom'
 // 小区介绍详情页导航栏
 const ApartmentDetailNav = () => {
-  const back = () =>
-    Toast.show({
-      content: '点击了返回区域',
-      duration: 1000,
-    })
+  const navigate = useNavigate()
+  const back = () => navigate('/MyRoom/RoomCard')
 
   return (
     <NavBar
@@ -56,11 +54,12 @@ const CardOneComponent = (props: any) => {
   const [price, setprice] = useState(69808)
   const [rate, setrate] = useState(0.06)
   const [houseNum, sethouseNum] = useState(36)
+  const navigate = useNavigate()
   useEffect(() => {
     // 在此处通过props.apartmentId发送请求获取数据
   })
   const onHeaderClick = () => {
-    Toast.show('点击了卡片Header区域')
+    navigate('/MyRoom/ApartmentDetailComponent')
   }
   const consult = () => {
     Toast.show('咨询经纪人')
@@ -70,7 +69,7 @@ const CardOneComponent = (props: any) => {
       <Card
         title={<div style={{ fontSize: '0.5rem', fontWeight: 900 }}>卡片标题</div>}
         extra={
-          <div style={{ color: '#c5c5c5', fontSize: '0.3rem' }}>
+          <div style={{ color: '#c5c5c5', fontSize: '0.3rem', cursor: 'pointer' }}>
             <span>小区详情</span>
             <i className="iconfont icon-right-outlined"></i>
           </div>
@@ -133,7 +132,7 @@ const CardTwoComponent = (props: any) => {
   return (
     <Tabs
       style={{
-        '--title-font-size': '0.5rem',
+        '--title-font-size': '0.4rem',
         '--active-title-color': '#ea7e61',
         '--active-line-color': '#ea7e61',
         '--fixed-active-line-width': '2rem',
@@ -146,36 +145,60 @@ const CardTwoComponent = (props: any) => {
       <Tabs.Tab title="小区概况" key="introduction">
         {introduction.map((item, index) => {
           return (
-            <p key={index} className={styles.pFontSize}>
-              {item}
-            </p>
+            <Ellipsis
+              key={index}
+              className={styles.pFontSize}
+              direction="end"
+              content={item}
+              expandText="展开"
+              collapseText="收起"
+              rows={3}
+            ></Ellipsis>
           )
         })}
       </Tabs.Tab>
       <Tabs.Tab title="基础设施" key="infrastructure">
         {infrastructure.map((item, index) => {
           return (
-            <p key={index} className={styles.pFontSize}>
-              {item}
-            </p>
+            <Ellipsis
+              key={index}
+              className={styles.pFontSize}
+              direction="end"
+              content={item}
+              expandText="展开"
+              collapseText="收起"
+              rows={3}
+            ></Ellipsis>
           )
         })}
       </Tabs.Tab>
       <Tabs.Tab title="建筑品质" key="architecturalQuality">
         {architecturalQuality.map((item, index) => {
           return (
-            <p key={index} className={styles.pFontSize}>
-              {item}
-            </p>
+            <Ellipsis
+              key={index}
+              className={styles.pFontSize}
+              direction="end"
+              content={item}
+              expandText="展开"
+              collapseText="收起"
+              rows={3}
+            ></Ellipsis>
           )
         })}
       </Tabs.Tab>
       <Tabs.Tab title="大堂楼栋" key="lobbyBuilding">
         {lobbyBuilding.map((item, index) => {
           return (
-            <p key={index} className={styles.pFontSize}>
-              {item}
-            </p>
+            <Ellipsis
+              key={index}
+              className={styles.pFontSize}
+              direction="end"
+              content={item}
+              expandText="展开"
+              collapseText="收起"
+              rows={3}
+            ></Ellipsis>
           )
         })}
       </Tabs.Tab>
@@ -191,6 +214,7 @@ const ApartmentComponent = (props: ApartmentComponentPros) => {
   return (
     <div>
       <ApartmentDetailNav />
+      <CarouselComponent />
       <NavComponent></NavComponent>
       <CardOneComponent apartmentId={props.apartmentId} />
       <CardTwoComponent apartmentId={props.apartmentId} />

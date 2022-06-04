@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react'
 import { Form, Input, Button, Space, Toast, Selector } from 'antd-mobile'
+import { useNavigate } from 'react-router-dom'
 import style from './style.module.css'
 import { reqUserReg, reqUserLogin } from '@/api'
 
@@ -16,6 +17,7 @@ const prompt = (msg: string) => {
 
 const LoginForm = () => {
   const [formLog] = Form.useForm()
+  const navigate = useNavigate()
   const submitLog = async () => {
     try {
       const query = await formLog
@@ -29,6 +31,7 @@ const LoginForm = () => {
       reqUserLogin(query)
         .then((res) => {
           localStorage.setItem('token', res.data.token)
+          navigate(`/RoomActivityPage`)
         })
         .catch((err) => {
           prompt(err.msg)

@@ -1,6 +1,5 @@
 .myTabs {
   padding: 0.2rem;
-  width: 9rem;
   background-color: #f9f9f9;
 }
 
@@ -10,8 +9,7 @@
 }
 
 .pFontSize {
-  font-size: 0.5rem;
-  height: 8rem;
+  font-size: 0.3rem;
 }
 
 .myNoticeBar {
