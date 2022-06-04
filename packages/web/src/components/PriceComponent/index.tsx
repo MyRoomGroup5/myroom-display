@@ -2,22 +2,22 @@ import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 import './style.css'
 
-export default function PriceComponent() {
-  const price = {
-    district: {
-      name: '海沧',
-      value: [3.13, 3.07, 3.07, 3.05, 3.07, 3.04],
-    },
-    avenue: {
-      name: '海沧区政府',
-      value: [3.1, 3.08, 3.1, 3.12, 3.09, 3.1],
-    },
-    community: {
-      name: '兴港花园三期',
-      value: [3.09, 3.08, 3.08, 3.11, 3.11, 3.11],
-    },
-    date: ['12月', '01月', '02月', '03月', '04月', '05月'],
-  }
+export default function PriceComponent(price: any) {
+  // const price = {
+  //   district: {
+  //     name: '海沧',
+  //     value: [3.13, 3.07, 3.07, 3.05, 3.07, 3.04],
+  //   },
+  //   avenue: {
+  //     name: '海沧区政府',
+  //     value: [3.1, 3.08, 3.1, 3.12, 3.09, 3.1],
+  //   },
+  //   community: {
+  //     name: '兴港花园三期',
+  //     value: [3.09, 3.08, 3.08, 3.11, 3.11, 3.11],
+  //   },
+  //   date: ['12月', '01月', '02月', '03月', '04月', '05月'],
+  // }
   // 折线图配置对象
   const option = {
     tooltip: {

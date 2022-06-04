@@ -8,3 +8,6 @@ export const reqUserReg = (data: registerObj) =>
 // 登录接口
 export const reqUserLogin = (data: loginObj) =>
   requests({ url: '/user/login', data, method: 'post' })
+
+// 获取详情页
+export const reqHouseDetail = (id: number) => requests({ url: `/house/${id}`, method: 'get' })

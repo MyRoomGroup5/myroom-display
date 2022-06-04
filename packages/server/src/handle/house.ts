@@ -32,25 +32,25 @@ const getHouseDetail = async (ctx: Context) => {
       if (tags.length >= len) {
         return
       }
-      if (item.title === '楼层位置') {
+      if (item.title === '楼层') {
         tags.push(`${item.value}楼层`)
       }
       if (item.title === '电梯' && item.value === '有') {
         tags.push('有电梯')
       }
-      if (item.title === '房源类型') {
+      if (item.title === '房源') {
         tags.push(item.value as string)
       }
-      if (item.title === '装修类型' && item.value === '精装') {
+      if (item.title === '装修' && item.value === '精装') {
         tags.push('精装修')
       }
-      if (item.title === '房本年限') {
+      if (item.title === '年限') {
         tags.push(item.value as string)
       }
-      if (item.title === '房屋类型') {
+      if (item.title === '类型') {
         tags.push(item.value as string)
       }
-      if (item.title === '交易权属') {
+      if (item.title === '权属') {
         tags.push(item.value as string)
       }
     })
