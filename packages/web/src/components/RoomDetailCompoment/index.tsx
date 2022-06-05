@@ -72,7 +72,7 @@ const RoomDetailTag = () => {
                 {tags}
             </Space>
             <span style={{ paddingLeft: '3rem' }}>
-                <InformationCircleOutline color='var(--adm-color-weak)' fontSize={16} />
+                <InformationCircleOutline color='var(--adm-color-weak)' fontSize={36} />
                 <span style={{ fontSize: '0.3rem' }}>反馈</span>
             </span>
         </div>
@@ -85,9 +85,9 @@ const RoomTitle = () => {
         <div>
             <h1>{roomDetail.data.basic_message.name}</h1>
             <Space>
-                <UserContactOutline fontSize={24} /><span style={{ fontSize: '0.3rem', fontWeight: '700' }}>房源发布人</span>
-                <FileOutline fontSize={24} /><span style={{ fontSize: '0.3rem', fontWeight: '700' }}>房源发布机构</span>
-                <FileOutline fontSize={24} /><span style={{ fontSize: '0.3rem', fontWeight: '700' }}>官方资质</span>
+                <UserContactOutline fontSize={36} /><span style={{ fontSize: '0.3rem', fontWeight: '700' }}>房源发布人</span>
+                <FileOutline fontSize={36} /><span style={{ fontSize: '0.3rem', fontWeight: '700' }}>房源发布机构</span>
+                <FileOutline fontSize={36} /><span style={{ fontSize: '0.3rem', fontWeight: '700' }}>官方资质</span>
             </Space>
         </div>
     )

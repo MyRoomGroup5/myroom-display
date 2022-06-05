@@ -19,7 +19,7 @@ function App() {
       {/* <ApartmentDetailComponent /> */}
       {/* <CommentPageCompnent></CommentPageCompnent> */}
       <RoomDetailComponent></RoomDetailComponent>
-      {/* <RoomCard></RoomCard> */}
+      <RoomCard></RoomCard>
     </div>
   )
 }
