@@ -61,7 +61,7 @@ const roomDetail = {
   const price = Math.floor(roomDetail.data.basic_message.price * 10000 / roomDetail.data.basic_message.ares)
 
   const tags = roomDetail.data.tags.map((item, index) => (
-      <Tag color='#2db7f5' style={{ fontSize: '0.3rem' }} key={index}>{item}</Tag>
+      <Tag color='orange' style={{ fontSize: '0.3rem' }} key={index}>{item}</Tag>
   ))
 
 // 房源详情页tag
@@ -95,7 +95,7 @@ const RoomTitle = () => {
 
 // 获取房屋具体信息
 const roomDetailList = roomDetail.data.detail_message.map((item, index) => (
-    <List.Item key={index} style={{float: 'left', fontSize: '0.5rem', width: '4.5rem'}}><span style={{paddingRight: '0.2rem'}}>{item.title}</span><span>{item.value}</span></List.Item>
+    <List.Item key={index} style={{float: 'left', fontSize: '0.45rem', width: '4.6rem'}}><span style={{paddingRight: '0.4rem', color: 'gray'}}>{item.title}</span><span>{item.value}</span></List.Item>
 ))
 
 
@@ -108,21 +108,26 @@ const RoomDeatil = () => {
         })
     }
     return (
-        <div style={{ marginTop: '0.3rem' }}>
-            <span style={{ fontSize: '0.5rem', fontWeight: '700', paddingRight: ' 1.5rem', color: 'orange'}}>
-                <span>{roomDetail.data.basic_message.price}万</span><Divider direction='vertical' />
-            </span>
-            <span style={{ fontSize: '0.5rem', fontWeight: '700', paddingRight: ' 1.3rem', color: 'orange'}}>
-                <span>{roomDetail.data.basic_message.room_type}</span><Divider direction='vertical' />
-            </span>
-            <span style={{ fontSize: '0.5rem', fontWeight: '700', color: 'orange' }}>
-                <span>{roomDetail.data.basic_message.ares}</span>
-            </span>
-            <div>
-                <List.Item style={{float: 'left', fontSize: '0.5rem', width: '4.5rem'}}><span style={{paddingRight: '0.2rem'}}>售价</span><span>{price}万/平</span></List.Item>
+        <div>
+            <div style={{ marginTop: '0.3rem', overflow: 'hidden', display: 'flex'}}>
+                <List.Item style={{float: 'left', width: '2rem', paddingRight: '1rem'}}>
+                    <span style={{paddingRight: '0.4rem', fontWeight: '700', fontSize: '0.5rem', color: 'orange', }}>{roomDetail.data.basic_message.price}万</span>
+                    <span style={{fontSize: '0.4rem', color: 'gray'}}>售价</span>
+                </List.Item>
+                <List.Item style={{float: 'left', color: 'orange', width: '2rem', paddingRight: '1.5rem',}}>
+                    <span style={{paddingRight: '0.3rem', fontWeight: '700', fontSize: '0.5rem', color: 'orange'}}>{roomDetail.data.basic_message.room_type}</span>
+                    <span style={{fontSize: '0.4rem', color: 'gray'}}>房型</span>
+                </List.Item>
+                <List.Item style={{float: 'left', color: 'orange', width: '2.5rem'}}>
+                    <span style={{paddingRight: '0.4rem', fontWeight: '700', fontSize: '0.5rem', color: 'orange'}}>{roomDetail.data.basic_message.ares}平</span>
+                    <span style={{fontSize: '0.4rem', color: 'gray'}}>建筑面积</span>
+                </List.Item>
+            </div>
+            <div style={{overflow: 'hidden'}}>
+                <List.Item style={{float: 'left', fontSize: '0.45rem', width: '4.6rem'}}><span style={{paddingRight: '0.4rem', color: 'gray'}}>售价</span><span>{price}万/平</span></List.Item>
                 {roomDetailList}
             </div>
-            <List.Item style={{float: 'left', fontSize: '0.5rem', width: '4.5rem'}}><span style={{paddingRight: '0.2rem'}}>小区</span><span>{roomDetail.data.basic_message.name}</span></List.Item>
+             <List.Item onClick={handleClick} style={{fontSize: '0.45rem'}}><span style={{paddingRight: '0.4rem', color: 'gray'}}>小区</span><span>{roomDetail.data.basic_message.name}</span></List.Item>
         </div>
     )
 }
