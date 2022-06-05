@@ -6,7 +6,6 @@ import { useRoutes } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 
 const routes: any = [
-  { path: '/', auth: false, component: lazy(() => import('./FrontendAuth')) },
   { path: '/Login', auth: true, component: lazy(() => import('./pages/Login')) },
   {
     path: '/MyRoom/RoomActivityPage',
