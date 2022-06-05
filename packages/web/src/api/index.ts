@@ -11,3 +11,6 @@ export const reqUserLogin = (data: loginObj) =>
 
 // 获取详情页
 export const reqHouseDetail = (id: number) => requests({ url: `/house/${id}`, method: 'get' })
+
+// 获取活动页
+export const reqHouseActive = () => requests({ url: `/agent/show`, method: 'get' })
